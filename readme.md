@@ -9,8 +9,11 @@ _Bien que cette version soit parfaitement fonctionnelle, il demeure quelques dé
 
 ***
 
-![ITEMX](/docs/images/ITEMX1.JPG)
+![ITEMX](/docs/images/ITEMX1.JPG)(/docs/images/Key.png)
+
 
 ***
 
 ## LAYOUT
+
+![IMAGE](/docs/images/ITEMX1.JPG)
