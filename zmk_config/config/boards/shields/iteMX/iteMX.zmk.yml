@@ -1,0 +1,11 @@
+file_format: "1"
+id: iteMX
+name: iteMX
+type: shield
+url: https://github.com/MartinDrillon/zmk-config
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - iteMX_left
+  - iteMX_right

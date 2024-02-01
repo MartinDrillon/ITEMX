@@ -1,0 +1,16 @@
+    if SHIELD_itemdeux_left
+
+config ZMK_KEYBOARD_NAME
+    default "itemdeux"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_itemdeux_left || SHIELD_itemdeux_right
+
+config ZMK_SPLIT
+    default y
+
+endif

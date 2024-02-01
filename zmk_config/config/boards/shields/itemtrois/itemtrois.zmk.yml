@@ -1,0 +1,11 @@
+file_format: "1"
+id: itemtrois
+name: itemtrois
+type: shield
+url: https://github.com/MartinDrillon/zmk-config
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - itemtrois_left
+  - itemtrois_right

@@ -1,0 +1,5 @@
+config SHIELD_iteMX_left
+    def_bool $(shields_list_contains,iteMX_left)
+
+config SHIELD_iteMX_right
+    def_bool $(shields_list_contains,iteMX_right)
