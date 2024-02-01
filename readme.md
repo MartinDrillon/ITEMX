@@ -10,10 +10,11 @@ _Bien que cette version soit parfaitement fonctionnelle, il demeure quelques dé
 ***
 
 ![ITEMX](/docs/images/ITEMX1.JPG)
+***
 ![ITEMX2](/docs/images/key3.png)
 
 ***
 
-## LAYOUT
+## DISPOSITION DES CARACTÈRES
 
-![IMAGE](/docs/images/ITEMX1.JPG)
+![keymap](/docs/images/keymap1.png)
