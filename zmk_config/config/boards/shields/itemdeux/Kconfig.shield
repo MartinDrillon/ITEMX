@@ -1,5 +1,0 @@
-config SHIELD_itemdeux_left
-    def_bool $(shields_list_contains,itemdeux_left)
-
-config SHIELD_itemdeux_right
-    def_bool $(shields_list_contains,itemdeux_right)
