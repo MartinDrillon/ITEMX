@@ -1,0 +1,5 @@
+config SHIELD_itemtrois_left
+    def_bool $(shields_list_contains,itemtrois_left)
+
+config SHIELD_itemtrois_right
+    def_bool $(shields_list_contains,itemtrois_right)

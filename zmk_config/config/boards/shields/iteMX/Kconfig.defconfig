@@ -1,0 +1,16 @@
+    if SHIELD_iteMX_right
+
+config ZMK_KEYBOARD_NAME
+    default "Clavier Martin"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_iteMX_left || SHIELD_iteMX_right
+
+config ZMK_SPLIT
+    default y
+
+endif

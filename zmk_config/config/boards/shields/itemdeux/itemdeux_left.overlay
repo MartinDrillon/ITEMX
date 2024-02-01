@@ -1,0 +1,14 @@
+// itemdeux_left.overlay
+
+#include "itemdeux.dtsi" // Notice that the main dtsi files are included in the overlay.
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 1 GPIO_ACTIVE_HIGH> // col2 in the schematic
+        , <&pro_micro 0 GPIO_ACTIVE_HIGH> // col3 in the schematic
+        , <&pro_micro 2 GPIO_ACTIVE_HIGH> // col4 in the schematic
+        , <&pro_micro 3 GPIO_ACTIVE_HIGH> // col5 in the schematic
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH> // col6 in the schematic
+        , <&pro_micro 9 GPIO_ACTIVE_HIGH> // col7 in the schematic
+        ;
+};
