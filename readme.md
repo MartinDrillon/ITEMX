@@ -11,7 +11,7 @@ _Bien que cette version soit parfaitement fonctionnelle, il demeure quelques dé
 
 ![ITEMX](/docs/images/ITEMX1.JPG)
 ![ITEMX2](/docs/images/key.png)
-![ITEMX3](/docs/images/key3.png)
+![ITEMX3](/docs/images/key3.JPG)
 
 ***
 
