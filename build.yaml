@@ -13,29 +13,6 @@
 #
 ---
 include:
-#  - board: nice_nano_v2
-#    shield: itemun_left
-#  - board: nice_nano_v2
-#    shield: itemun_right
-
-  # - board: nice_nano_v2
-  #   shield: itemdeux_left
-  # - board: nice_nano_v2
-  #   shield: itemdeux_right
-  # # - board: nice_nano_v2
-  # #   shield: settings_reset   
-
-  # - board: nice_nano_v2
-    # shield: lily58_left
-  # - board: nice_nano_v2
-    # shield: lily58_right
-
-  # - board: seeeduino_xiao_ble
-  #   shield: itemtrois_left
-  # - board: seeeduino_xiao_ble
-  #   shield: itemtrois_right
-  # - board: seeeduino_xiao_ble 
-  #   shield: settings_reset  
 
   - board: seeeduino_xiao_ble
     shield: iteMX_left
@@ -43,8 +20,3 @@ include:
     shield: iteMX_right
   - board: seeeduino_xiao_ble
     shield: settings_reset  
-
-  # - board: seeeduino_xiao_ble
-#     shield: totem_left
-  # - board: seeeduino_xiao_ble
-    # shield: totem_right                       
