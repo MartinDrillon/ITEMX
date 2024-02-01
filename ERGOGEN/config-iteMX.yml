@@ -1,0 +1,980 @@
+units: 
+  xix: 17.5
+  xiy: 20
+
+points:
+  key:
+    padding: u
+    tags: 
+      1u: true
+    footprints:
+      mx_hotswap:
+        type: mx
+        params:
+          hotswap: true
+          reverse: true
+          keycaps: true
+        nets:
+          # from: col_1
+          # to: col_3
+          from: =colrow
+          to: =column_net
+      diode:
+        type: diodevia
+        nets:
+          # from: col_4
+          # to: col_5
+          from: =colrow
+          to: =row_net
+        anchor:
+          shift: [3, -4]   
+          rotate: 90
+
+  zones:
+    board:
+      rows:
+        bottom:
+          row_net: row_3
+        home:
+          row_net: row_2
+        top:
+          row_net: row_1
+
+      columns:
+        outer:
+          key:
+            column_net: col_1
+          rows:
+            bottom:
+              bind: [1,1,1,1] # Haut,Gauche,Bas,Droit
+            home:
+              bind: [1,1,1,1]
+            top: 
+              bind: [1,1,1,1]
+            
+
+        pinkie:
+          stagger: 2
+          spread: u
+          key:
+            column_net: col_2
+          rows:
+            bottom:
+              bind: [1,1,1,1] # Haut,Gauche,Bas,Droit
+            home:
+              bind: [1,1,1,1]
+            top: 
+              bind: [1,1,1,1]
+            
+        ring:
+          stagger: 12
+          spread: u
+          key:
+            column_net: col_3
+          rows:
+            bottom:
+              bind: [1,1,10,1] # Haut,Gauche,Bas,Droit
+            home:
+              bind: [1,1,1,1]
+            top: 
+              bind: [1,3,1,1]
+
+        middle:
+          stagger: 6
+          spread: u
+          origin: [0,-19]
+          key:  
+            column_net: col_4
+          rows:
+            bottom:
+              bind: [1,1,5,1] # Haut,Gauche,Bas,Droit
+            home:
+              bind: [1,1,1,1]
+            top: 
+              bind: [1,1,1,1]
+          
+                   
+        index:
+          stagger: -8
+          spread: u
+          origin: [0,-19]
+          key: 
+            column_net: col_5
+          rows:
+            bottom:
+              bind: [1,1,1,1] # Haut,Gauche,Bas,Droit
+            home:
+              bind: [1,1,1,5]
+            top: 
+              bind: [1,1,1,5]
+
+
+        inner:
+          stagger: -3
+          spread: u
+          key: 
+            column_net: col_6
+          rows:
+            bottom:
+              bind: [1,1,5,1] # Haut,Gauche,Bas,Droit
+            home:
+              bind: [1,1,1,1]
+            top: 
+              bind: [1,1,1,1]
+
+    thumb:
+      anchor:
+        ref: board_ring_bottom
+        shift: [0,-27]
+
+      rows:
+        first:
+          row_net: row_4
+
+      columns:
+        alt: 
+          key:
+            column_net: col_2
+          rows: 
+            first:
+              rotate: 30
+              bind: [5,1,1,1] 
+
+        ctrl:
+          stagger: 12.5
+          spread: u
+          key:
+            column_net: col_3
+          rows: 
+            first:  
+              bind: [1,1,1,10] 
+
+        shift:
+          stagger: -4.5
+          spread: u
+          key: 
+            column_net: col_4
+          rows: 
+            first:
+              bind: [1,1,1,1] 
+
+        e: 
+          spread: u
+          stagger: -8
+          key: 
+            column_net: col_5
+          rows: 
+            first:
+              bind: [1,1,1,1] # Avec la rotation : Droite,Haut,Gauche,Bas
+
+        layer:
+          stagger: -8
+          spread: u
+          key: 
+            column_net: col_6
+          rows: 
+            first:
+              bind: [1,1,1,1] 
+
+outlines:
+  exports:
+
+### TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES TOUCHES ###
+
+    keys: #1u
+      - type: keys
+        side: left
+        size: [1u - 0.5, 1u - 0.5] # Choc keycaps are 17.5 x 16.5
+        bound: false
+        tags: [1u]
+
+    keysspace: #1u
+      - type: keys
+        side: left
+        size: [18.5, 17.5] # Choc keycaps are 17.5 x 16.5
+        bound: false
+
+    keyscase: #1u
+      - type: keys
+        side: left
+        size: [15.5, 15.5] # Choc keycaps are 17.5 x 16.5
+        bound: false
+
+    bind: 
+      - type: keys
+        side: left
+        size: [u, u]
+
+### PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB PCB  ###
+
+    contour_pcb: 
+      - type: polygon
+        points: 
+          - ref: board_outer_top
+            shift: [-u/2-1, u/2+1] 
+          - ref: board_outer_top
+            shift: [u/2-1, u/2+1]
+          - ref: board_pinkie_top
+            shift: [-u/2-1, u/2+1]
+          - ref: board_pinkie_top
+            shift: [u/2-1, u/2+1]
+          - ref: board_ring_top
+            shift: [-u/2-1, u/2+1]
+          - ref: board_ring_top
+            shift: [u/2-1, u/2+1] 
+          - ref: board_middle_top  
+            shift: [-u/2-1, u/2+1]
+          - ref: board_middle_top
+            shift: [u/2+1, u/2+1]
+          - ref: board_index_top
+            shift: [u/2+1, u/2+1]
+          - ref: board_inner_top  #inversion des signes à cause de la rotation
+            shift: [-u/2+1, u/2+1]
+          - ref: board_inner_top
+            shift: [u/2+1, u/2+1]
+          - ref: board_inner_top
+            shift: [u/2+1, u/2-3]
+          - ref: board_inner_top
+            shift: [u/2+u+2.5, u/2-3] #u + 2.5 = espace nécessaire pour le mcu          
+          - ref: thumb_layer_first
+            shift: [u/2+2.5, -u/2-1]
+          - ref: thumb_layer_first
+            shift: [-u/2-1, -u/2-1]
+          - ref: thumb_shift_first
+            shift: [-u/2-1, -u/2-1]
+          - ref: thumb_alt_first  
+            shift: [u/2+1, -u/2-1]
+          - ref: thumb_alt_first
+            shift: [-u/2-1, -u/2-1]
+          - ref: thumb_alt_first
+            shift: [-u/2-1, u/2+1.76] 
+          - ref: board_pinkie_bottom
+            shift: [-u/2+1,-u/2-1]
+          - ref: board_outer_bottom
+            shift: [u/2+1,-u/2-1]
+          - ref: board_outer_bottom
+            shift: [-u/2-1,-u/2-1]
+
+    contour_pcb_fillet: 
+      - type: outline
+        name: contour_pcb
+        fillet: 0.5
+
+    empreinte_batterie: 
+      - type: rectangle 
+        size: [16,42] #Pour batterie lipo 501540
+        anchor:
+          ref: thumb_layer_first
+          shift: [-u/2+2, u/2+1]
+
+    pcb: # Outline du pcb
+      [contour_pcb_fillet, -empreinte_batterie]
+
+### TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE ###
+
+    _switch_cutouts: # Pour l’emboitement des switchs dans la top plate
+      - type: keys
+        side: left
+        size: 14 # Plate cutouts are 14mm * 14mm for both MX and Choc
+        bound: false
+
+    contour_top: 
+      - type: polygon
+        points: 
+          - ref: board_outer_top
+            shift: [-u/2-1, u/2+1] #inversion des signes à cause de la rotation
+          - ref: board_outer_top
+            shift: [u/2-1, u/2+1]
+          - ref: board_pinkie_top
+            shift: [-u/2-1, u/2+1]
+          - ref: board_pinkie_top
+            shift: [u/2-1, u/2+1]
+          - ref: board_ring_top
+            shift: [-u/2-1, u/2+1]
+          - ref: board_ring_top
+            shift: [u/2-1, u/2+1] #+2 à cause de la rotation qui écarte les touches
+          - ref: board_middle_top  #inversion des signes à cause de la rotation de la touche à 180
+            shift: [-u/2-1, u/2+1]
+          - ref: board_middle_top
+            shift: [u/2+1, u/2+1]
+          - ref: board_index_top
+            shift: [u/2+1, u/2+1]
+          - ref: board_inner_top  #inversion des signes à cause de la rotation
+            shift: [-u/2+1, u/2+1]
+          - ref: board_inner_top
+            shift: [u/2+1, u/2+1]
+          - ref: board_inner_top
+            shift: [u/2+1, u/2-3-23] #espace pour le mcu
+          - ref: board_inner_top
+            shift: [u/2+u+3, u/2-3-23] #u + 3 = espace nécessaire pour le mcu            
+          - ref: thumb_layer_first
+            shift: [u/2+2.5, -u/2-1]
+          - ref: thumb_layer_first
+            shift: [-u/2-1, -u/2-1]
+          - ref: thumb_shift_first
+            shift: [-u/2-1, -u/2-1]
+          - ref: thumb_alt_first  
+            shift: [u/2+1, -u/2-1]
+          - ref: thumb_alt_first
+            shift: [-u/2-1, -u/2-1]
+          - ref: thumb_alt_first
+            shift: [-u/2-1, u/2+1.76] 
+          - ref: board_pinkie_bottom
+            shift: [-u/2+1,-u/2-1]
+          - ref: board_outer_bottom
+            shift: [u/2+1,-u/2-1]
+          - ref: board_outer_bottom
+            shift: [-u/2-1,-u/2-1]
+
+    contour_top_fillet: 
+      - type: outline
+        name: contour_top
+        fillet: 0.5
+
+    top: # Outline de la plaque supérieur
+      [contour_top_fillet, -_switch_cutouts]
+
+### BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE###
+
+    pied_bottom: # Trou pour les supports en caoutchouc sur la plaque du bas
+      - type: circle
+        radius: 3.6
+        anchor: 
+          ref: 
+          - board_outer_top
+          shift: [3.8, -4.7]
+      - type: circle
+        radius: 3.6
+        anchor:
+          ref: 
+          - board_outer_bottom
+          shift: [-3.8, -4.7]
+      - type: circle
+        radius: 3.6
+        anchor: 
+          ref: 
+          - board_middle_top
+          shift: [-9, -4]
+      - type: circle
+        radius: 3.6
+        anchor: 
+          ref: 
+          - board_inner_top
+          shift: [-3.8, -4.7]
+      - type: circle
+        radius: 3.6
+        anchor: 
+          ref: 
+          - thumb_alt_first
+          shift: [-3.8, -4.7]
+      - type: circle
+        radius: 3.6
+        anchor: 
+          ref: 
+          - thumb_layer_first
+          shift: [3.8, -4.7]
+
+    bottom: # Outline de la plaque inférieur
+      [contour_pcb_fillet, -pied_bottom]
+
+# ### CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE CASE ###
+
+    case_outer: 
+      - type: polygon
+        points: 
+          - ref: board_outer_top
+            shift: [-u/2-1-2, u/2+1+2] 
+          - ref: board_outer_top
+            shift: [u/2-1-2, u/2+1+2] 
+          - ref: board_pinkie_top
+            shift: [-u/2-1-2, u/2+1+2]
+          - ref: board_pinkie_top
+            shift: [u/2-1-2, u/2+1+2]
+          - ref: board_ring_top
+            shift: [-u/2-1-2, u/2+1+2]
+          - ref: board_ring_top
+            shift: [u/2-1-2, u/2+1+2] 
+          - ref: board_middle_top  
+            shift: [-u/2-1-2, u/2+1+2]
+          - ref: board_middle_top
+            shift: [u/2+1+0.493, u/2+1+2] 
+          - ref: board_index_top
+            shift: [u/2+1+2, u/2+1+2-0.493] #tan (b-180) = x/a. Ici 16.8-180. 493 correspond à un angle de 19 mais cela fonctionne
+          - ref: board_inner_top  #inversion des signes à cause de la rotation
+            shift: [-u/2+1+2, u/2+1+2]
+          - ref: board_inner_top
+            shift: [u/2+1+2, u/2+1+2] #inversion des signes à cause de la rotation
+          - ref: board_inner_top
+            shift: [u/2+1+2, u/2-3+2] #inversion des signes à cause de la rotation
+          - ref: board_inner_top
+            shift: [u/2+u+2.5+2, u/2-3+2] #u + 2.5 = espace nécessaire pour le mcu           #inversion des signes à cause de la rotation
+          - ref: thumb_layer_first
+            shift: [u/2+2.5+2, -u/2-1-2]
+          - ref: thumb_layer_first
+            shift: [-u/2-1-0.222, -u/2-1-2]
+          - ref: thumb_shift_first
+            shift: [-u/2-1-0.445, -u/2-1-2]
+          - ref: thumb_alt_first  
+            shift: [u/2+1-0.363, -u/2-1-2]
+          - ref: thumb_alt_first
+            shift: [-u/2-1-2, -u/2-1-2]
+          - ref: thumb_alt_first
+            shift: [-u/2-1-2, u/2+1-1+0.36] 
+          - ref: board_pinkie_bottom
+            shift: [-u/2+1+2,-u/2-1-2]
+          - ref: board_outer_bottom
+            shift: [u/2+1+2,-u/2-1-2]
+          - ref: board_outer_bottom
+            shift: [-u/2-1-2,-u/2-1-2]
+
+    _case_outer_fillet: 
+      - type: outline
+        name: case_outer
+        fillet: 0.5
+
+    base_case_outer: 
+      [_case_outer_fillet, -_switch_cutouts]
+      
+    mur_case_bas: 
+      [_case_outer_fillet, -contour_pcb_fillet]
+      
+    _case_xiao_interieur:
+      - type: polygon
+        points:
+          - ref: board_inner_home
+            shift: [(u+2)-10, (u/2+2.7)+11.8-0.5]
+          - ref: board_inner_home
+            shift: [u/2+u+3-0.5, (u/2+2.7)+11.8-0.5]
+          - ref: thumb_e_first
+            shift: [u/2+u+3-0.5, (u/2+2.7)-11.8+2]
+          - ref: thumb_e_first
+            shift: [(u+2)-10, (u/2+2.7)-11.8+2]
+
+    _case_xiao_exterieur:
+      - type: polygon
+        points:
+          - ref: board_inner_home
+            shift: [(u+2)-10.5, (u/2+2.7)+12.8+0.5]
+          - ref: board_inner_home
+            shift: [u/2+u+3+2-0.5, (u/2+2.7)+12.8+0.5]
+          - ref: thumb_e_first
+            shift: [u/2+u+3+2-0.5, (u/2+2.7)-12.8+2]
+          - ref: thumb_e_first
+            shift: [(u+2)-10.5, (u/2+2.7)-12.8+2]
+
+    _case_xiao_nettoyage:
+      - type: polygon
+        points:
+          - ref: board_inner_top  #inversion des signes à cause de la rotation
+            shift: [-u/2+1, u/2+1]
+          - ref: board_inner_top
+            shift: [u/2+1, u/2+1]
+          - ref: board_inner_top
+            shift: [u/2+1, u/2-3]
+          - ref: board_inner_top
+            shift: [u/2+u+2.5, u/2-3] #u + 2.5 = espace nécessaire pour le mcu          
+          - ref: thumb_layer_first
+            shift: [u/2+2.5, -u/2-1]
+          - ref: thumb_layer_first
+            shift: [-u/2-1, -u/2-1]
+          
+    _case_xiao_fillet: 
+      - type: outline
+        name: _case_xiao_exterieur
+        fillet: 0.5
+
+    _case_xiao_mur: 
+      [_case_xiao_fillet, -_case_xiao_interieur]
+
+    _ouverture_usb:
+      - type: rectangle
+        anchor:
+          ref: board_inner_home
+          shift: [u+2-5.5, (u/2+2.7)+5+1.8]
+        size: [10, 10]
+    _ouverture_powerswitch:
+      - type: rectangle
+        anchor:
+          ref: board_index_top
+          shift: [-10.5, 8] 
+          rotate: -19
+        size: [14, 20]   #4 4
+
+    _ouverture_led:
+      - type: circle
+        anchor: 
+          ref: board_inner_home
+          shift: [u+2+5.6-1, u-0.3]
+        radius: 0.5
+
+    _mounting_hole_22: # 22 = Épaisseur nécessaire au passage du corps de la vis 
+      outer_bottom: 
+        type: circle
+        anchor: 
+          ref: board_outer_bottom
+          shift: [u/2, u/2+1]
+        radius: 1.1
+      outer_home: 
+        type: circle
+        anchor: 
+          ref: board_outer_home
+          shift: [u/2, u/2+1]
+        radius: 1.1
+      middle_home: 
+        type: circle
+        anchor: 
+          ref: board_middle_home
+          shift: [-u/2, u/2]
+        radius: 1.1
+      inner_top: 
+        type: circle
+        anchor: 
+          ref: board_inner_top
+          shift: [-u/2, -u/2+1.5]
+        radius: 1.1
+      e_first: 
+        type: circle
+        anchor: 
+          ref: thumb_e_first
+          shift: [u/2, -u/2]
+        radius: 1.1
+      ctrl_first: 
+        type: circle
+        anchor: 
+          ref: thumb_ctrl_first
+          shift: [0, u/2+0.75]     
+        radius: 1.1
+
+    _mounting_hole_40: # 40 = Diamètre de la tête de la vis
+      outer_bottom: 
+        type: circle
+        anchor: 
+          ref: board_outer_bottom
+          shift: [u/2, u/2+1]
+        radius: 2
+      outer_home: 
+        type: circle
+        anchor: 
+          ref: board_outer_home
+          shift: [u/2, u/2+1]
+        radius: 2
+      middle_home: 
+        type: circle
+        anchor: 
+          ref: board_middle_home
+          shift: [-u/2, u/2]
+        radius: 2
+      inner_top: 
+        type: circle
+        anchor: 
+          ref: board_inner_top
+          shift: [-u/2, -u/2+1.5]
+        radius: 2
+      e_first: 
+        type: circle
+        anchor: 
+          ref: thumb_e_first
+          shift: [u/2, -u/2]
+        radius: 2
+      ctrl_first: 
+        type: circle
+        anchor: 
+          ref: thumb_ctrl_first
+          shift: [0, u/2+0.75]     
+        radius: 2
+
+    contour_case_haut_poly: 
+      - type: polygon
+        points: 
+          - ref: board_middle_top
+            shift: [u/2+1, u/2+1]
+          - ref: board_index_top
+            shift: [u/2+1, u/2+1]
+          - ref: thumb_layer_first
+            shift: [-u/2, u/2]
+          - ref: thumb_layer_first
+            shift: [u/2, -u/2]
+          - ref: thumb_layer_first
+            shift: [-u/2-1, -u/2-1]
+          - ref: thumb_shift_first
+            shift: [-u/2-1, -u/2-1]
+          - ref: thumb_alt_first  
+            shift: [u/2+1, -u/2-1]
+          - ref: thumb_alt_first
+            shift: [-u/2-1, -u/2-1]
+          - ref: thumb_alt_first
+            shift: [-u/2-1, u/2+1.76] 
+          - ref: board_pinkie_bottom
+            shift: [-u/2+1,-u/2-1]
+          - ref: board_outer_bottom
+            shift: [u/2+1,-u/2-1]
+          - ref: board_outer_bottom
+            shift: [-u/2-1,-u/2-1]
+
+    _contour_case_haut: 
+      [contour_case_haut_poly, bind]
+
+cases: 
+  iteMX_construction_case: 
+    - type: outline
+      name: base_case_outer
+      extrude: 12.1  #épaisseur du clavier de la top plate à la bottom plate inclus, autrement dit : hauteur que doit avoir la case
+      shift: [0, 0, 0] #[x, y, z]
+
+    - type: outline
+      name: _contour_case_haut 
+      extrude: 2  #épaisseur du clavier de la top plate à la bottom plate inclus, autrement dit : hauteur que doit avoir la case
+      shift: [0, 0, 10.1] #[x, y, z]
+      operation: subtract
+
+    - type: outline
+      name: _switch_cutouts
+      extrude: 7  #épaisseur du clavier de la top plate à la bottom plate inclus, autrement dit : hauteur que doit avoir la case
+      shift: [0, 0, 5.1] #[x, y, z]
+      operation: subtract
+
+    - type: outline 
+      name: contour_pcb
+      extrude: 5.1 #épaisseur de la top plate = 6.8-5.1 soit 1.7mm
+      shift: [0, 0, 0] #[x, y, z]
+      operation: subtract
+
+    # - type: outline
+    #   name: _case_xiao_fillet
+    #   extrude: 10 #épaisseur d’1.7mm pour être constant avec la top plate
+    #   operation: add
+    - type: outline
+      name: _case_xiao_interieur
+      extrude: 10 #hauteur du mcu : 3.2mm. 5.1+3.2=8.3 plus 1.7 de sécurité pusiqu’il y a la place 
+      operation: subtract
+    - type: outline
+      name: _case_xiao_nettoyage
+      extrude: 5.1 #place nécessaire pour le mcu: 5mm. 5.1 (hauteur depuis le pcb) +5=10.1
+      operation: subtract
+
+    - type: outline
+      name: _ouverture_usb
+      shift: [0, 0, 5.7]
+      extrude: 4.3
+      operation: subtract
+    - type: outline
+      name: _ouverture_powerswitch
+      shift: [0, 0, 1]
+      extrude: 3.1
+      operation: subtract
+    # - type: outline
+    #   name: _ouverture_reset_led
+    #   shift: [0, 0, 12.1]
+    #   extrude: 2
+    #   operation: subtract
+
+    - type: outline
+      name: _mounting_hole_22
+      extrude: 10
+      operation: subtract
+    - type: outline
+      name: _mounting_hole_40
+      shift: [0, 0, 6.8]
+      extrude: 3.2
+      operation: subtract
+
+
+  iteMX_case: 
+    - type: case
+      name: _iteMX_construction_case
+      shift: [0, 0, -3.4]
+
+
+  iteMX_bottom: 
+    - type: outline
+      name: bottom
+      extrude: 1.7 # Épaisseur de la bottom plate. Généré dans le but de créer la 3d de la footprint correspondante.
+      shift: [0, 0, -3.4]
+
+
+pcbs:
+  iteMX_pcbuuu: #Pcb. 2 pour éviter la réécriture sur le fichier itemun_pcb déjà modifié. 
+    outlines:
+      board:
+        outline: pcb
+      keycaps:
+        outline: keys
+        layer: Eco1.User
+    footprints:
+      xiao_seeed_reverse:
+        type: xiao_seeed_reverse
+        anchor:
+          ref: board_inner_home
+          shift: [u+1.5, u/2+4.4+1.8]
+      pcm12: #slider switch
+        type: pcm12
+        anchor:
+          ref: board_index_top
+          shift: [-4, u/2+5.3] 
+          rotate: -202.8
+        nets:
+          from: pos  
+          to: RAW
+        params:
+          reverse: true 
+      boutonpush:
+        type: EVQP7C01P
+        anchor:
+          ref: board_index_top
+          shift: [3, u/2+2.5] 
+          rotate: -22.8 
+      connecteur_batterie:
+        type: connecteur_batterie
+        anchor:
+          ref: board_inner_top
+          shift: [u/2, 3] #inversion des signes à cause de la rotation de la touche
+          rotate: 90
+        nets:
+          P1: pos  
+          P2: GND
+
+      monting_32_outer_bottom: 
+        type: mountinghole_32mm
+        anchor: 
+          ref: board_outer_bottom
+          shift: [u/2, u/2+1]
+      monting_32_outer_home: 
+        type: mountinghole_32mm
+        anchor: 
+          ref: board_outer_home
+          shift: [u/2, u/2+1]
+      monting_32_middle_home: 
+        type: mountinghole_32mm
+        anchor: 
+          ref: board_middle_home
+          shift: [-u/2, u/2]
+      monting_32_inner_top: 
+        type: mountinghole_32mm
+        anchor: 
+          ref: board_inner_top
+          shift: [-u/2, -u/2+1.5]
+      monting_32_e_first: 
+        type: mountinghole_32mm
+        anchor: 
+          ref: thumb_e_first
+          shift: [u/2, -u/2]
+      monting_32_ctrl_first: 
+        type: mountinghole_32mm
+        anchor: 
+          ref: thumb_ctrl_first
+          shift: [0, u/2+0.75]      
+
+
+
+      via_board_outer_top: # Via double
+        type: via_double
+        anchor: 
+          ref: board_outer_top
+          shift: [7.5, -1.5]
+        nets: 
+          net: col_1   
+      via_board_outer_home:
+        type: via_double
+        anchor: 
+          ref: board_outer_home
+          shift: [7.5, -1.5]
+        nets: 
+          net: col_1   
+      via_board_outer_bottom:
+        type: via_double
+        anchor: 
+          ref: board_outer_bottom
+          shift: [7.5, -1.5]
+        nets: 
+          net: col_1   
+
+      via_board_pinkie_top: # Via double
+        type: via_double
+        anchor: 
+          ref: board_pinkie_top
+          shift: [7.5, -1.5]
+        nets: 
+          net: col_2   
+      via_board_pinkie_home:
+        type: via_double
+        anchor: 
+          ref: board_pinkie_home
+          shift: [7.5, -1.5]
+        nets: 
+          net: col_2   
+      via_board_pinkie_bottom:
+        type: via_double
+        anchor: 
+          ref: board_pinkie_bottom
+          shift: [7.5, -1.5]
+        nets: 
+          net: col_2   
+
+      via_board_ring_top:
+        type: via_double
+        anchor: 
+          ref: board_ring_top
+          shift: [7.5, -1.5]
+        nets: 
+          net: col_3   
+      via_board_ring_home:
+        type: via_double
+        anchor: 
+          ref: board_ring_home
+          shift: [7.5, -1.5]
+        nets: 
+          net: col_3   
+      via_board_ring_bottom:
+        type: via_double
+        anchor: 
+          ref: board_ring_bottom
+          shift: [7.5, -1.5]
+        nets: 
+          net: col_3      
+
+      via_board_middle_top:
+        type: via_double
+        anchor: 
+          ref: board_middle_top
+          shift: [7.5, -6]
+        nets: 
+          net: col_4   
+      via_board_middle_home:
+        type: via_double
+        anchor: 
+          ref: board_middle_home
+          shift: [7.5, -6]
+        nets: 
+          net: col_4   
+      via_board_middle_bottom:
+        type: via_double
+        anchor: 
+          ref: board_middle_bottom
+          shift: [7.5, -6]
+        nets: 
+          net: col_4         
+
+      via_board_index_top:
+        type: via_double
+        anchor: 
+          ref: board_index_top
+          shift: [7.5, -4]
+        nets: 
+          net: col_5   
+      via_board_index_home:
+        type: via_double
+        anchor: 
+          ref: board_index_home
+          shift: [8.278, -5.745]
+        nets: 
+          net: col_5   
+      via_board_index_bottom:
+        type: via_double
+        anchor: 
+          ref: board_index_bottom
+          shift: [8.278, -5.745]
+        nets: 
+          net: col_5         
+
+      via_simple_board_outer_top: 
+        type: via
+        anchor: 
+          ref: board_outer_top
+          shift: [0, u/2-3] # La valeur d’y est positive car il y a une rotation à 180 degré sur la touche
+        nets: 
+          net: col_1
+      via_simple_board_inner_top: 
+        type: via
+        anchor: 
+          ref: board_inner_top
+          shift: [0, u/2-3] # La valeur d’y est positive car il y a une rotation à 180 degré sur la touche
+        nets: 
+          net: col_6
+      via_simple_board_inner_top_deux: 
+        type: via
+        anchor: 
+          ref: board_inner_top
+          shift: [u/2, 3] # La valeur d’y est positive car il y a une rotation à 180 degré sur la touche
+        nets: 
+          net: col_2
+
+### BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE BOTTOM PLATE###
+
+  _iteMX_bottom: #plaque bottom
+    outlines:
+      board:
+        outline: bottom
+
+    footprints:
+      monting_30_outer_bottom: 
+        type: mountinghole_30mm
+        anchor: 
+          ref: board_outer_bottom
+          shift: [u/2, u/2+1]
+      monting_30_outer_home: 
+        type: mountinghole_30mm
+        anchor: 
+          ref: board_outer_home
+          shift: [u/2, u/2+1]
+      monting_30_middle_home: 
+        type: mountinghole_30mm
+        anchor: 
+          ref: board_middle_home
+          shift: [-u/2, u/2]
+      monting_30_inner_top: 
+        type: mountinghole_30mm
+        anchor: 
+          ref: board_inner_top
+          shift: [-u/2, -u/2+1.5]
+      monting_30_e_first: 
+        type: mountinghole_30mm
+        anchor: 
+          ref: thumb_e_first
+          shift: [u/2, -u/2]
+      monting_30_ctrl_first: 
+        type: mountinghole_30mm
+        anchor: 
+          ref: thumb_ctrl_first
+          shift: [0, u/2+0.75]     
+
+### TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE TOP PLATE ###
+
+  _iteMX_top: #plaque top
+    outlines:
+      board:
+        outline: top
+    footprints:
+      monting_22_outer_bottom: 
+        type: mountinghole_22mm
+        anchor: 
+          ref: board_outer_bottom
+          shift: [u/2, u/2+1]
+      monting_22_outer_home: 
+        type: mountinghole_22mm
+        anchor: 
+          ref: board_outer_home
+          shift: [u/2, u/2+1]
+      monting_22_middle_home: 
+        type: mountinghole_22mm
+        anchor: 
+          ref: board_middle_home
+          shift: [-u/2, u/2]
+      monting_22_inner_top: 
+        type: mountinghole_22mm
+        anchor: 
+          ref: board_inner_top
+          shift: [-u/2, -u/2+1.5]
+      monting_22_e_first: 
+        type: mountinghole_22mm
+        anchor: 
+          ref: thumb_e_first
+          shift: [u/2, -u/2]
+      monting_22_ctrl_first: 
+        type: mountinghole_22mm
+        anchor: 
+          ref: thumb_ctrl_first
+          shift: [0, u/2+0.75]             
+
+
+
+          #    node src/cli.js input/item/config-iteMX.yml -o output/iteMX 
