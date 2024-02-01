@@ -1,2 +1,2 @@
 # ITEMX
-Ortholinear split keyboard using ZMK and Xiao Seeed BLE"
+Ortholinear split keyboard using ZMK and Xiao Seeed BLE
