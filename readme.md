@@ -20,7 +20,9 @@ La particularité de ce clavier, par rapport à d’autres claviers ergonomiqu
 
 Le principe qui dicte cette configuration physique est le suivant : **À condition d’avoir une touche accessible en touch typing, il est toujours plus simple de donner un imput par la simple pression d’un doigt plutôt que d’avoir recours à une combinaisons** (mod-tap, hold-tap, homerows mods... voir la documentation de [ZMK](https://zmk.dev/docs) sur les comportements possibles). Cettre rêgle est d’autant plus importante lorsque l’imput de base joue lui-même régulièrement un rôle dans une combinaison. Toutes les configurations alternative à l’utilisation d’une touche dédiée uniquement à un modifier entrainent systématiquement soit des compliquations, soit des erreurs de frappe occasionelles, soit les deux. Cela peut être concédé à la pureté d’un clavier extrèmement minimaliste quand on en a un usage de bureautique standard mais n’est pas fonctionnel lorsqu’il s’agit de maîtriser des outils digitaux complexes. 
 
-Ici, une touche de pouce spécifique est attribué pour chaque par modifiers de base (shift, ctrl, alt pour la mains gauche et shift, altgr, win pour la droite) en plus de quelques caractères très fréquemment utilisé. Cela permet à la fois d’utiliser la moitié gauche du clavier comme un macropad lors de l’utilisation de logiciels de DAO/CAO nécessitant un usage intensif de combinaison à base de schift, ctrl, alt, alt+ctrl... et de rapidifier la frappe, pusique les pouces entrent en jeu. 
+Ici, une touche de pouce spécifique est attribué pour chaque par modifiers de base (shift, ctrl, alt pour la mains gauche et shift, altgr, win pour la droite) en plus de quelques caractères très fréquemment utilisé. Cela permet à la fois d’utiliser la moitié gauche du clavier comme un macropad lors de l’utilisation de logiciels de DAO/CAO nécessitant un usage intensif de combinaison à base de schift, ctrl, alt, alt+ctrl... tout en rapidifiant la frappe, pusique les pouces entrent en jeu. 
+
+Un second point crucial pour ce clavier : il utilise une disposition dérivée du BÉPO. Pour être exact, il s’agit d’une adaptation du travail de Kawamashi publié [ici](https://forum.bepo.fr/viewtopic.php?id=1696). Après presque deux ans d’utilisation, il ne fait aucun doute pour moi que cette disposition est très largement supérieure à l’azerty pour la frappe du français (indirectement de l’anglais aussi), autant en terme de confort que de rapidité de frappe. Le seul avantage indéniable à l’azerty est celui de l’habitude et de la relative difficulté à apprendre une nouvelle disposition.
 
 ***
 
@@ -32,11 +34,6 @@ Ici, une touche de pouce spécifique est attribué pour chaque par modifiers de 
 _La disposition des lettres de base est convaincante et ne devrait pas être changé. Quelques légères modifications pourraient toutefois être effectué par un usager souhaitant taper occasionnellement en anglais. Les signes de ponctuations par contre, en particulier les signes schifté, seront peut-être remplacé par des cumbos dans le futur._ 
 
 ***
-
-Cela nous ammène sur le deuxième point crucial de ce clavier : il utilise une disposition dérivée du BÉPO. Pour être exact, il s’agit d’une adaptation du travail de Kawamashi publié [ici](https://forum.bepo.fr/viewtopic.php?id=1696). Après presque deux ans d’utilisation, il ne fait aucun doute pour moi que cette disposition est très largement supérieure à l’azerty pour la frappe du français (indirectement de l’anglais aussi), autant en terme de confort que de rapidité de frappe. Le seul avantage indéniable à l’azerty est celui de l’habitude et de la relative difficulté à apprendre une nouvelle disposition.
-
-//Cette disposition possède plus de caractère directement invoqué que l’azerty (é, è, ê, à, ç ayant chacun une touche dédiée). Paradoxalement, ce clavier possède beaucoup moins de touches qu’un clavier classique (46 contre 62 pour les plus petits claviers standard, mais toutes sont accesible en touch typing). Cela renforce la nécessité de déplacer certains caractères sous les pouces. L’usage de plusieurs layers et de cumbos pour les caractères les plus fréquents reste bien entendu nécessaire. 
-
 
 **Cumbo**
 
