@@ -21,8 +21,8 @@ _Bien que cette version soit parfaitement fonctionnelle, il demeure quelques dé
 
 **Niveau de base**
 
-Ce niveau me semble presque complètement abouti. La ponctuation sera peut être légèrement modifié dans le futur : les caractères shifté pourront être remplacés par des cumbos supplémentaires. Quelques légères modifications pourraient être effectué par un usager souhaitant taper occasionnellement en anglais. 
 ![BASE](/docs/images/1x/BASE.png)
+_Ce niveau est presque complètement abouti. les caractères de ponctuations shifté pourraient être remplacés par des cumbos supplémentaire. Quelques légères modifications pourraient être effectué par un usager souhaitant taper occasionnellement en anglais._ 
 
 ***
 La particularité de ce clavier, par rapport à d’autres claviers ergonomiques de ce genre ([KYRIA](https://github.com/foostan/crkbd), [LILY58](https://github.com/kata0510/Lily58)) dont il s’inspire, est d’avoir au total 10 touches de pouces toutes accessibles en déplaçant uniquement le doigt et non l’ensemble de la main (touch typing).
