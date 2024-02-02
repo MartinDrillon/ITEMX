@@ -14,7 +14,7 @@ _Bien que cette version soit parfaitement fonctionnelle, il demeure quelques dé
 ***
 ![ITEMX3](/docs/images/key3.png)
 ***
-![ITEMX2](/docs/images/ITEMX2.png)
+![ITEMX2](/docs/images/ITEMX2.JPG)
 ***
 
 ## DISPOSITION DES CARACTÈRES
