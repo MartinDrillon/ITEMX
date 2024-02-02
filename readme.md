@@ -51,7 +51,7 @@ _Ce niveau était relativement
 
 ## NOTE SUR L’UTILISATION DU BÉPO AVEC ZMK
 
-Contrairement à QMK, ZMK ne propose pas de fichier à intégrer dans son keymap pour modifier le type d’os clavier utilisé.
+Contrairement à QMK, ZMK ne propose pas de fichier à intégrer dans son keymap pour le faire correspondre au driver qu’utilise votre ordinateur pour votre clavier. Sans rentrer dans les détails techniques, le keycodes &kp Z sera traduit en B et &kp B en k par votre ordinateur, si il est configuré pour utiliser un driver BÉPO au lieu du driver AZERTY classique. Pour rendre le keymap lisible, j’ai écris un second fichier [keys_bepo.h]() dont le but est d’ajouter un second keycode pour tout les caractères spécifiques au bépo. Concrètement, pour taper B sur un ordinateur utilisant un driver BÉPO, il est possible d’écrire dans son keymap ou bien &kp Z ou bien &kp BP_B. Cela signifie que j’ai dû attribuer un nouveau code à chaque caractère. Tout ces codes peuvent être retrouvé dans le fichier.
 
 ***
 ## NOTE SUR LA CONSTRUCTION
