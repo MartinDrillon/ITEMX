@@ -49,9 +49,13 @@ _Cette partie de la disposition me semble plus personnelle et peux faire l’obj
 _Ce niveau était relativement 
 ***
 
-## NOTE SUR L’UTILISATION DU BÉPO AVEC ZMK
+## ITEMX AVEC ZMK
 
-Contrairement à QMK, ZMK ne propose pas de fichier à intégrer dans son keymap pour le faire correspondre au driver qu’utilise votre ordinateur pour votre clavier. Sans rentrer dans les détails techniques, le keycodes &kp Z sera traduit en B et &kp B en k par votre ordinateur, si il est configuré pour utiliser un driver BÉPO au lieu du driver AZERTY classique. Pour rendre le keymap lisible, j’ai écris un second fichier [keys_bepo.h]() dont le but est d’ajouter un second keycode pour tout les caractères spécifiques au bépo. Concrètement, pour taper B sur un ordinateur utilisant un driver BÉPO, il est possible d’écrire dans son keymap ou bien &kp Z ou bien &kp BP_B. Cela signifie que j’ai dû attribuer un nouveau code à chaque caractère. Tout ces codes peuvent être retrouvé dans le fichier.
+[ZMK](https://github.com/MartinDrillon/zmk-config-ITEMX)
+
+**Note sur l’utilisation du bépo avec ZMK**
+
+Contrairement à QMK, ZMK ne propose pas de fichier à inclure dans son keymap pour le faire correspondre au driver clavier qu’utilise votre ordinateur (ici le [fichier](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_bepo.h) qmk permettant d’écrire un keymap en BÉPO). Sans rentrer dans les détails techniques, sans celui-ci, lorsque votre ordinateur utilise un driver BÉPO, le keycodes &kp Z est traduit en B et &kp B en k. Il a donc fallu créer le fichier adapté : [keys_bepo.h](https://github.com/MartinDrillon/zmk-config-ITEMX/blob/main/config/keys_bepo.h). Cela permet d’utiliser un second keycode plus lisible pour les tous caractères spécifiques au bépo. Concrètement, pour taper B sur un ordinateur utilisant un driver BÉPO, il est possible d’écrire dans son keymap ou bien &kp Z ou bien &kp BP_B. Tout ces codes peuvent être retrouvé dans le fichier en question. 
 
 ***
 ## NOTE SUR LA CONSTRUCTION
