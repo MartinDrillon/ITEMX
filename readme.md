@@ -14,13 +14,15 @@ _Bien que cette version soit parfaitement fonctionnelle, il demeure quelques dé
 
 
 ***
-![ITEMX3](/docs/images/key3.png)
-
 
 ![ITEMX](/docs/images/ITEMX1.JPG)
 
 
 ![ITEMX2](/docs/images/ITEMX2.JPG)
+
+
+![ITEMX3](/docs/images/key3.png)
+
 ***
 
 
