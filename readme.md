@@ -83,8 +83,8 @@ Voici le repository à copier si vous souhaitez créer votre propre keymap pour 
 ## AMÉLIORATION PRÉVUE SUR LA VERSION À VENIR
 
 
-- Modification du placement des touches de pouces.
-- Faciliter la construction, en particulier au niveau de l’intégration de la XIAO SEEE.
+- Ajustement du placement de certaines touches de pouces.
+- Faciliter la construction, en particulier au niveau de l’intégration de la XIAO SEEED.
 - Amélioration du design de la coque.
 - Publication d’un guide de construction adapté.
 
