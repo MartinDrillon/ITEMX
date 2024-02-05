@@ -2,7 +2,7 @@
 
 ***
 
-ITEMX est un clavier en deux parties de 46 touches fonctionnant avec ZMK et utilisant une SEEED XIAO BLE comme microcontrolleur. Il a été entièrement conçu avec [Ergogen](https://github.com/ergogen/ergogen).
+ITEMX est un clavier en deux parties de 46 touches fonctionnant avec [ZMK](https://github.com/zmkfirmware/zmk) et utilisant une SEEED XIAO BLE comme microcontrolleur. Il a été entièrement conçu avec [Ergogen](https://github.com/ergogen/ergogen).
 
 C’est la quatrième itération d’un projet dont le but est de créer un clavier ergonomique ayant 5 touches de pouces par main et utilisant une répartitions des caractères adaptés du [BÉPO](https://bepo.fr/wiki/Accueil). 
 
@@ -29,14 +29,14 @@ Le principe qui dicte cette configuration physique est le suivant : **À condi
 
 **Niveau de base**
 
-![BASE](/docs/images/1x/BASE.png)
+![BASE](/docs/images/1x/base.png)
 _La disposition des lettres de base est convaincante et ne devrait pas être changé. Quelques légères modifications pourraient toutefois être effectué par un usager souhaitant taper occasionnellement en anglais. Les signes de ponctuations par contre, en particulier les signes schifté, seront peut-être remplacé par des cumbos dans le futur._ 
 
 ***
 
 **Cumbo**
 
-![CUMBO](/docs/images/1x/CUMBO.png)
+![CUMBO](/docs/images/1x/cumbo.png)
 
 _Afin de renforcer la possibilité d’utiliser la partie gauche du clavier comme un macropad, les cumbos invoquant des raccourcis claviers classique (ctrl+z/c/v...) se situent sous la main gauche. Les cumbos invoquant des caractères spéciaux sont à droite. À noter que dans le cas d’un utilisateur gaucher, il faudrait les inversers, ainsi d’ailleur que les modifiers placé sous les pouces gauches et droits._
 _Cette partie de la disposition me semble plus personnelle et peux faire l’objet de changement régulier._
@@ -45,17 +45,20 @@ _Cette partie de la disposition me semble plus personnelle et peux faire l’obj
 
 **Sym**
 
-![SYM](/docs/images/1x/CUMBO.png)
+![SYM](/docs/images/1x/sym.png)
 _Ce niveau était relativement 
+
 ***
 
 ## ITEMX AVEC ZMK
 
-[ZMK](https://github.com/MartinDrillon/zmk-config-ITEMX)
+Repository à copier si vous souhaitez créer votre propre keymap pour ce clavier : [ZMK](https://github.com/MartinDrillon/zmk-config-ITEMX).
 
 **Note sur l’utilisation du bépo avec ZMK**
 
-Contrairement à QMK, ZMK ne propose pas de fichier à inclure dans son keymap pour le faire correspondre au driver clavier qu’utilise votre ordinateur (ici le [fichier](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_bepo.h) qmk permettant d’écrire un keymap en BÉPO). Sans rentrer dans les détails techniques, sans celui-ci, lorsque votre ordinateur utilise un driver BÉPO, le keycodes &kp Z est traduit en B et &kp B en k. Il a donc fallu créer le fichier adapté : [keys_bepo.h](https://github.com/MartinDrillon/zmk-config-ITEMX/blob/main/config/keys_bepo.h). Cela permet d’utiliser un second keycode plus lisible pour les tous caractères spécifiques au bépo. Concrètement, pour taper B sur un ordinateur utilisant un driver BÉPO, il est possible d’écrire dans son keymap ou bien &kp Z ou bien &kp BP_B. Tout ces codes peuvent être retrouvé dans le fichier en question. 
+Contrairement à QMK, ZMK ne propose pas de fichier à inclure dans son keymap pour le faire correspondre au driver clavier qu’utilise votre ordinateur (ici le [fichier](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_bepo.h) qmk permettant d’écrire un keymap en BÉPO). Sans rentrer dans les détails techniques, sans celui-ci, lorsque votre ordinateur utilise un driver BÉPO, le keycodes &kp Z est traduit en B et &kp B en k. 
+
+Il a donc fallu créer le fichier adapté : [keys_bepo.h](https://github.com/MartinDrillon/zmk-config-ITEMX/blob/main/config/keys_bepo.h). Cela permet d’utiliser un second keycode plus lisible pour les tous caractères spécifiques au BÉPO. Concrètement, pour taper B sur un ordinateur utilisant un driver BÉPO, il est possible d’écrire dans son keymap ou bien &kp Z ou bien &kp BP_B. Tout ces codes peuvent être retrouvé dans le fichier en question. 
 
 ***
 ## NOTE SUR LA CONSTRUCTION
