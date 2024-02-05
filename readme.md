@@ -11,9 +11,9 @@ _Bien que cette version soit parfaitement fonctionnelle, il demeure quelques dé
 ***
 
 ![ITEMX](/docs/images/ITEMX1.JPG)
-***
+
 ![ITEMX3](/docs/images/key3.png)
-***
+
 ![ITEMX2](/docs/images/ITEMX2.JPG)
 ***
 
@@ -56,6 +56,6 @@ Voici le repository à copier si vous souhaitez créer votre propre keymap pour 
 ## AMÉLIORATION PRÉVUE SUR LA VERSION À VENIR
 
 - Modification du placement des touches de pouces.
-- Faciliter la construction, en particulier au niveau de l’intégration de la XIAO SEEED.
+- Faciliter la construction, en particulier au niveau de l’intégration de la XIAO SEEE.
 - Amélioration du design de la coque. 
 - Publication d’un guide de construction adapté. 
