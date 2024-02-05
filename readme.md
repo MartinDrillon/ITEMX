@@ -43,24 +43,19 @@ _Visualisation à venir._
 
 ***
 
-## ITEMX AVEC ZMK
+## UTILISATION DU BÉPO AVEC ZMK
 
-Voici le repository à copier si vous souhaitez créer votre propre keymap pour ce clavier : [ZMK](https://github.com/MartinDrillon/zmk-config-ITEMX).
+Contrairement à QMK, ZMK ne propose pas de fichier à inclure dans le ficher keymap pour le faire correspondre au driver clavier qu’utilise votre ordinateur (ici le [fichier](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_bepo.h) QMK permettant d’écrire un keymap en BÉPO). Sans rentrer dans les détails techniques, sans celui-ci, lorsque votre ordinateur utilise un driver BÉPO, le keycodes &kp Z est traduit en B et &kp B en k.
 
-***
+J’ai donc créer le fichier équivalent pour ZMK : [keys_bepo.h](https://github.com/MartinDrillon/zmk-config-ITEMX/blob/main/config/keys_bepo.h). Son but est de définir un second keycode plus lisible pour les caractères spécifiques au BÉPO. Lorsqu’il est inclu au keymap, il sera possible d’uliliser ou bien &kp Z ou bien &kp BP_B pour taper B sur un ordinateur utilisant un driver BÉPO. La liste de tout ces codes se trouvent dans le fichier en question. 
 
-**Note sur l’utilisation du bépo avec ZMK**
-
-Contrairement à QMK, ZMK ne propose pas de fichier à inclure dans le ficher keymap pour le faire correspondre au driver clavier qu’utilise votre ordinateur (ici le [fichier](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_bepo.h) QMK permettant d’écrire un keymap en BÉPO). Sans rentrer dans les détails techniques, sans celui-ci, lorsque votre ordinateur utilise un driver BÉPO, le keycodes &kp Z est traduit en B et &kp B en k. 
-
-J’ai donc créer le fichier correspondant pour ZMK : [keys_bepo.h](https://github.com/MartinDrillon/zmk-config-ITEMX/blob/main/config/keys_bepo.h). Son but est de définir un second keycode plus lisible pour les tous caractères spécifiques au BÉPO. Lorsqu’il est inclu au keymap, il sera possible d’uliliser ou bien &kp Z ou bien &kp BP_B pour taper B sur un ordinateur utilisant un driver BÉPO. Tout ces codes se trouve dans le fichier en question. 
+Voici le repository à copier si vous souhaitez créer votre propre keymap pour ce clavier ou vous en inspirer : [ZMK](https://github.com/MartinDrillon/zmk-config-ITEMX).
 
 ***
-## NOTE SUR LA CONSTRUCTION
-
-Si vous souhaitez réaliser vous-même ce clavier, il vous faudra télécharger les fichiers gebers et les envoyer à un fabriquant tel que JLCPCB ou PCBWAY. N’hésitez pas à me contacter pour des instructions plus détaillés. Je vous conseille cependant d’attendre la publication de la version suivante. 
-Mauvais matériel pour impression 3d 
-BOM => lien vers une spreadsheet ? 
 
 ## AMÉLIORATION PRÉVUE SUR LA VERSION À VENIR
 
+- Modification du placement des touches de pouces.
+- Faciliter la construction, en particulier au niveau de l’intégration de la XIAO SEEED.
+- Amélioration du design de la coque. 
+- Publication d’un guide de construction adapté. 
