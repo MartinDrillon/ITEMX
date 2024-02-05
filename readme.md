@@ -28,23 +28,14 @@ Sa particularité, par rapport à d’autres claviers ergonomiques ([KYRIA](
 **Niveau de base**
 
 ![BASE](/docs/images/1x/base.png)
-_La disposition des lettres de base est convaincante et ne devrait pas être changé. Quelques légères modifications pourraient toutefois être effectué par un usager souhaitant taper occasionnellement en anglais. Les signes de ponctuations par contre, en particulier les signes schifté, seront peut-être remplacé par des cumbos dans le futur._ 
-
-***
 
 **Cumbo**
 
 ![CUMBO](/docs/images/1x/cumbo.png)
 
-_Afin de renforcer la possibilité d’utiliser la partie gauche du clavier comme un macropad, les cumbos invoquant des raccourcis claviers classique (ctrl+z/c/v...) se situent sous la main gauche. Les cumbos invoquant des caractères spéciaux sont à droite. À noter que cela correspond à un usage droiter de la souris._
-
-***
-
 **Sym**
 
 ![SYM](/docs/images/1x/sym.png)
-
-***
 
 **Nav**
 
