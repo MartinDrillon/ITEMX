@@ -44,9 +44,9 @@ _Visualisation à venir._
 
 ## UTILISATION DU BÉPO AVEC ZMK
 
-Contrairement à QMK, ZMK ne propose pas de fichier à inclure dans le ficher keymap pour le faire correspondre au driver clavier qu’utilise votre ordinateur (ici le [fichier](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_bepo.h) QMK permettant d’écrire un keymap en BÉPO). Sans rentrer dans les détails techniques, sans celui-ci, lorsque votre ordinateur utilise un driver BÉPO, le keycodes &kp Z est traduit en B et &kp B en k.
+Contrairement à QMK, ZMK ne propose pas de fichier à inclure dans le ficher keymap pour le faire correspondre au driver du clavier qu’utilise votre ordinateur (ici le [fichier](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_bepo.h) QMK permettant d’écrire un keymap en BÉPO). Sans rentrer dans les détails techniques, sans celui-ci, lorsque votre ordinateur utilise un driver BÉPO, le keycodes &kp Z est traduit en B et &kp B en k.
 
-J’ai donc créer le fichier équivalent pour ZMK : [keys_bepo.h](https://github.com/MartinDrillon/zmk-config-ITEMX/blob/main/config/keys_bepo.h). Son but est de définir un second keycode plus lisible pour les caractères spécifiques au BÉPO. Lorsqu’il est inclu au keymap, il sera possible d’uliliser ou bien &kp Z ou bien &kp BP_B pour taper B sur un ordinateur utilisant un driver BÉPO. La liste de tout ces codes se trouvent dans le fichier en question. 
+J’ai donc écris le fichier équivalent pour ZMK : [keys_bepo.h](https://github.com/MartinDrillon/zmk-config-ITEMX/blob/main/config/keys_bepo.h). Son but est de définir un second keycode plus lisible pour les caractères spécifiques au BÉPO. Lorsqu’il est inclu au keymap, il sera possible d’uliliser ou bien &kp Z ou bien &kp BP_B pour taper B sur un ordinateur utilisant un driver BÉPO. La liste de tout ces codes se trouvent dans le fichier en question. 
 
 Voici le repository à copier si vous souhaitez créer votre propre keymap pour ce clavier ou vous en inspirer : [ZMK](https://github.com/MartinDrillon/zmk-config-ITEMX).
 
